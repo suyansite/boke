@@ -1,0 +1,35 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /applet
+spring:
+  application:
+    name: hyzx
+  servlet :
+    multipart :
+      #enabled : true # 是否支持多部分上传。
+      max-file-size : -1 # 最大支持文件上传的大小
+      max-request-size : -1 # 支持请求最大文件上传的大小
+
+# 直接放行URL
+ignore:
+  urls:
+    - /**
+
+asr:
+   #依图转写引擎地址
+
+   host : yitu.kegongtech.com
+
+  #依图转写引擎端口
+   port : 50051
+   #标贝共有云实时转写接口
+   databaker_realtime_url : wss://openapi.data-baker.com/asr/realtime
+   rootPath : /newdata/ziyanfanew/tp5/public/mp3/
+   hotWordUrl : https://selfdevphp.kegongtech.com/Program/File/showWord
+
+dev:
+   # 依图语音开放平台分配的DevId
+   id : 22009
+  # 用来加密的DevKey，与DevId共同生成请求header参数
+   key : OWNhOTNjYzk4NTg2NGM2ZGJhZjExZTY3MTM1NDZhNzI=
